@@ -1,11 +1,18 @@
 <html>
     <head>
         <title>Exercise 2.4</title>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <div>
+            <button id="logTablesButton" onclick="logBookFromRow(rowElement)">Log Tables</button>
+        </div>
     </head>
     <body>
         <div>
             <table class="table" id="technicalBookCatalog" border="1">
-                <tr>
+                <tr> Technical Books
                     <th>Title</th>
                     <th>Author</th>
                     <th>ISBN</th>
@@ -25,11 +32,11 @@
 
         </div>
 
-        <Br/>
+        <Br/>        <Br/>        <Br/>        <Br/>
 
         <div>
             <table class="table" id="cookeryBookCatalog" border="1">
-                <tr>
+                <tr> Cookery Books
                     <th>Title</th>
                     <th>Author</th>
                     <th>ISBN</th>
@@ -46,16 +53,22 @@
                 </tr>
             </table>
 
+        logTables()
+
         </div>
         
         <script>
 
-            function logTables(){
-
-                console.log(JSON.stringify( technicalBookCatalog))
-
-                console.log(JSON.stringify( cookeryBookCatalog))
+            function logBookFromRow(rowElement){
+                var rowElement = document.getElementById('technicalBookCatalog')
+                var book = {}
+                book.Title = rowElement.cells[0].firstChild.textContent
+                book.Author = rowElement.cells[1].firstChild.textContent
+                book.ISBN = rowElement.cells[2].firstChild.textContent
+                return book
+                console.log(JSON.stringify(book))
             }
+
         </script>
 
     </body>
