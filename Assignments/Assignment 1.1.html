@@ -1,12 +1,12 @@
 <html>
     <head>
-        <title>Exercise 2.4</title>
+        <title>Library XML</title>
         <link rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous">
         <div>
-            <button id="logTablesButton" onclick="logBookFromRow(rowElement)">Log Tables</button>
+            <button id="logTablesButton" onclick="logTechBooks(rowElement1, rowElement2)">Log Tech Books</button>
         </div>
     </head>
     <body>
@@ -34,6 +34,7 @@
 
         <Br/>        <Br/>        <Br/>        <Br/>
 
+        <button id="logTablesButton2" onclick="logCookBooks(rowElement3, rowElement4)">Log Cook Books</button>
         <div>
             <table class="table" id="cookeryBookCatalog" border="1">
                 <tr> Cookery Books
@@ -53,20 +54,48 @@
                 </tr>
             </table>
 
-        logTables()
-
         </div>
         
         <script>
+            var rowElement1 = document.getElementById('0001')
+            var rowElement2 = document.getElementById('0002')
+            var rowElement3 = document.getElementById('1001')
+            var rowElement4 = document.getElementById('1002')
 
-            function logBookFromRow(rowElement){
-                var rowElement = document.getElementById('technicalBookCatalog')
-                var book = {}
-                book.Title = rowElement.cells[0].firstChild.textContent
-                book.Author = rowElement.cells[1].firstChild.textContent
-                book.ISBN = rowElement.cells[2].firstChild.textContent
-                return book
-                console.log(JSON.stringify(book))
+            function logTechBooks(rowElement1, rowElement2){
+                console.log(JSON.stringify("Technical Books:"))
+                console.log(JSON.stringify("---------------"))
+                var book1 = {}
+                book1.Title = rowElement1.cells[0].firstChild.textContent
+                book1.Author = rowElement1.cells[1].firstChild.textContent
+                book1.ISBN = rowElement1.cells[2].firstChild.textContent
+                console.log(JSON.stringify(book1))
+                console.log(JSON.stringify("                                                        "))
+
+                var book2 = {}
+                book2.Title = rowElement2.cells[0].firstChild.textContent
+                book2.Author = rowElement2.cells[1].firstChild.textContent
+                book2.ISBN = rowElement2.cells[2].firstChild.textContent
+                console.log(JSON.stringify(book2))
+
+
+            }
+            function logCookBooks(rowElement3, rowElement4){
+                console.log(JSON.stringify("                                                         "))
+                console.log(JSON.stringify("Cookery Books:"))
+                console.log(JSON.stringify("--------------"))
+                var book3 = {}
+                book3.Title = rowElement3.cells[0].firstChild.textContent
+                book3.Author = rowElement3.cells[1].firstChild.textContent
+                book3.ISBN = rowElement3.cells[2].firstChild.textContent
+                console.log(JSON.stringify(book3))
+                console.log(JSON.stringify("                                                        "))
+
+                var book4 = {}
+                book4.Title = rowElement4.cells[0].firstChild.textContent
+                book4.Author = rowElement4.cells[1].firstChild.textContent
+                book4.ISBN = rowElement4.cells[2].firstChild.textContent
+                console.log(JSON.stringify(book4))
             }
 
         </script>
