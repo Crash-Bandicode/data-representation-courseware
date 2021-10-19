@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Exercise 2.4</title>
+    </head>
+    <body>
+        <div>
+            <table class="table" id="technicalBookCatalog" border="1">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr id="0001">
+                    <td>Programming for Dummies</td>
+                    <td>John Walkenbach</td>
+                    <td>0001</td>
+                </tr>
+                <tr id="0002">
+                    <td>Programming for Even Dummiers</td>
+                    <td>John Joggenstrauss</td>
+                    <td>0002</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <Br/>
+
+        <div>
+            <table class="table" id="cookeryBookCatalog" border="1">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr id="1001">
+                    <td>Anarchists Cookbook</td>
+                    <td>Anonomous</td>
+                    <td>1001</td>
+                </tr>
+                <tr id="1002">
+                    <td>From Crook to Cook</td>
+                    <td>Snoop Dog</td>
+                    <td>1002</td>
+                </tr>
+            </table>
+
+        </div>
+        
+        <script>
+
+            function logTables(){
+
+                console.log(JSON.stringify( technicalBookCatalog))
+
+                console.log(JSON.stringify( cookeryBookCatalog))
+            }
+        </script>
+
+    </body>
+</html>
