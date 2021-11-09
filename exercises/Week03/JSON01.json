@@ -1,0 +1,24 @@
+{
+    "employees":
+        {
+            "firstname": "John",
+            "lastname": "Doe",
+            "address": "Here not there",
+            "Age": "24"
+        },
+        {
+            "firstname": "Anna",
+            "lastname": "Smith",
+            "address": "Over there somewhere",
+        },
+        {
+            "firstname": "Peter",
+            "lastname": "Jones",
+            "address": "Not from around here",
+        },
+        {
+            "firstname": "Andrew",
+            "lastname": "Beatty",
+            "address": "Elsewhere",
+        },       
+}

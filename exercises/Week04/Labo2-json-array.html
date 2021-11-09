@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Lab 04.2</title>
+    </head>
+    <body>
+        <button onclick="displayJSON()">go</button>
+    </body>
+    <script>
+        function displayJSON() {
+            var obj = JSON.parse('{"employees": [{"firstname":"John", "lastname":"Doe"},{"firstname":"Anna", "lastname":"Smith"},{"firstname":"Peter", "lastname":"Jones"}]}')
+                for (employee of obj.employees){
+                    console.log(employee.firstname)
+                }
+        }
+
+    </script>
+</html>
