@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Test Create
+         </title>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <button onclick="callCreate()">Test Create</button>
+
+        <table class="table" id="carTable">
+            <tr>
+                    <th>Reg</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+            </tr>
+
+
+        </table>
+    </body>
+    <script>
+        function callCreate(){
+            var car ={reg:"29 C 4321", make:"Ford", model:"Transit", price:432}
+            //console.log("function")
+            $.ajax({
+                url:"http://127.0.0.1:5000/cars",
+                data: JSON.stringify(car),
+                dataType: "JSON",
+                method:"POST",
+                contentType: "application/json; charset=utf-8",
+                success: function(result){
+                    console.log(result)
+                },
+                error: function(xhr,status,msg){
+                    console.log("error "+msg + "code is: "+status)
+                }
+            })
+        }
+       
+    </script>
+</html>
