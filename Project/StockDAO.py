@@ -6,7 +6,7 @@ class StockDAO:
     def __init__(self): 
         self.db = mysql.connector.connect(
         host=cfg.mysql['host'],
-        username=cfg.mysql['username'],
+        user=cfg.mysql['user'],
         password=cfg.mysql['password'],
         database=cfg.mysql['database']
         )
