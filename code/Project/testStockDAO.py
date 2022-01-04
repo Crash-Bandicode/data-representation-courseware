@@ -19,8 +19,8 @@ Product2 = {
 # print(returnValue)
 
 # #GetAll:
-# returnValue = stockDAO.getAll()
-# print(returnValue)
+returnValue = stockDAO.getAll()
+print(returnValue)
 
 # returnValue = stockDAO.findByID(Product2['id'])
 # print(returnValue)
@@ -30,5 +30,5 @@ Product2 = {
 # print(returnValue)
 
 
-returnValue = stockDAO.delete(2)
-print(returnValue)
+# returnValue = stockDAO.delete(2)
+# print(returnValue)

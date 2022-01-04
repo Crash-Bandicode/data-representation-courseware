@@ -1,1 +1,2 @@
-Http://127.0.0.1:5000/products
+returnValue = stockDAO.delete(2)
+# print(returnValue)

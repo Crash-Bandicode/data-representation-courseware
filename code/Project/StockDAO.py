@@ -1,12 +1,14 @@
 import mysql.connector
+import config as cfg
+
 class StockDAO:
     db=""
     def __init__(self): 
         self.db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="0831560551crash",
-        database="DRDB"
+        host=cfg.mysql['host'],
+        username=cfg.mysql['username'],
+        password=cfg.mysql['password'],
+        database=cfg.mysql['database']
         )
 
 
